@@ -1,0 +1,542 @@
+.skip {
+    position: absolute;
+   left: -10000px;
+   width: auto;
+   height: 35px;
+   background-color: white;
+ }
+
+
+ .skip:focus {
+   position: absolute;
+   top: 20px;
+   left: auto;
+ }
+ /* code from threkk @ medium.com: https://threkk.medium.com/how-to-make-a-css-only-hamburger-menu-f7ad41e13399 */
+input[type="checkbox"]:not(:checked)+ul {
+    display: none;
+}
+
+main {
+    background-color: #00274C;
+}
+
+nav {
+    background-color: #00274C;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+nav ul {
+    /* Make the markers disappear */
+    list-style-type: none;
+}
+
+nav ul li {
+    /* Puts the elements in a single line */
+    display: inline-flex;
+    margin: 15px;
+}
+
+nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Because we are in mobile mode, we want to display it as a
+   vertical list */
+nav ul {
+    display: block;
+}
+
+/* We have two lists: the first one are the always visibile items
+   in the menu bar. The second one is the one that will be hidden */
+nav ul:last-child {
+    width: 100%;
+    flex-basis: 100%;
+}
+
+nav ul li {
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: .25rem;
+    color: white;
+}
+
+nav ul li a {
+    color:#FFCB05;
+    text-decoration:none;
+    font-family: 'Atkinson Hyperlegible', 'Montserrat', sans-serif;
+    size: medium;
+    border-radius: 25px;
+    border:#FFCB05 .1rem solid;
+    padding: .75rem;
+}
+
+/* Stlying the menu icon, the checkbox stays hidden */
+nav label {
+    text-align: right;
+    display: block;
+    padding: 15px;
+    line-height: 20px;
+    align-self: center;
+}
+
+nav h1 {
+    align-self: center;
+}
+
+.home > img {
+    object-fit: contain;
+    width: 30%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* sourced from: https://codepen.io/imjuangarcia/pen/pGgmbe */
+/* Typography imported from Google Fonts */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+p, a {
+  font-family: 'Atkinson Hyperlegible', Montserrat, sans-serif;
+  text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* a {
+    background-color: goldenrod;
+    text-decoration: none;
+    color: white;
+    border-radius: .25rem;
+    text-align: center;
+    display: inline-block;
+    transition: all .3s;
+} */
+
+a:hover {
+    opacity: .6;
+}
+
+/* Styles for the hero image */
+.welcome {
+    padding: 4rem 2rem;
+    /* grid styles */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+}
+.welcomediv {
+    background-image: url('../images/UMSI_CampusFall_UMSIBackpack_02.jpg');
+    background-size: cover;
+}
+.academicdiv {
+    background-image: url('../images/UMSI_DesignJam_GreatLakesWaterSafety_01.JPG');
+    background-size:cover;
+    padding-bottom: 1rem;
+    /* grid styles */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+}
+.healthdiv {
+    background-image: url('../images/MCOMMONS-AssortedCampusSelects-6.jpg.JPG');
+    background-size:cover;
+    padding-bottom: 1rem;
+    /* grid styles */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+}
+.lifediv {
+    background-image: url('../images/MCOMMONS-09072024_FanExperience-11.jpg');
+    background-size:cover;
+    padding-bottom: 1rem;
+    /* grid styles */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+}
+/* alt="Students in Michigan gear smile and pose for a photo from the fan section at a Big Noon Kickoff broadcast." */
+
+.welcome>* {
+    color: white;
+    background-color: #01162bc8;
+    border-radius: 25px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.welcome>h1 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.welcome>article>p {
+    font-size: .75rem;
+    font-weight: 200;
+}
+.welcome>article>h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.welcome>article>a {
+    padding: 1rem;
+    margin-top: .75rem;
+}
+
+.pages {
+    padding: 2rem;
+}
+
+/* .pages>ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+} */
+
+.pages i {
+    color:#FFCB05;
+    font-size: 4rem;
+    width: 4.5rem;
+    margin: 1rem;
+}
+.pages div :nth-child(odd) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pages>h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    padding-top: .5rem;
+    color: #ffcb05;
+}
+.pages>article {
+    text-align:justify;
+    font-size: .9rem;
+    color: white;
+}
+.pages h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    color: #00274C;
+    background-color: #FFCB05;
+    border-radius: 25px;
+    width: 14rem;
+    font-weight: semi-bold;
+}
+.pages a {
+    color:#00274C;
+    text-decoration: none;
+}
+.pages p {
+    font-size: .9rem;
+    color: white;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
+}
+
+
+/* resources styles */
+.resources {
+    padding: 2rem;
+}
+
+.resources>ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+}
+
+.resources>ul>li {
+    border: 1px solid #E2E2E2;
+    border-radius: 25px;
+}
+
+
+.resources p {
+    color: white;
+    padding: 1rem;
+    font-size: small;
+}
+.resources>h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    padding-top: .5rem;
+    margin-top: 1rem;
+    background-color: #FFCB05;
+    color: #00274C;
+    border-radius: 25px;
+    border: .1rem solid #FFCB05;
+}
+
+.resources>article {
+    text-align:left;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.resources>ul>li>figure {
+    max-height: 220px;
+    overflow: hidden;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: relative;
+    background-color: #FFCB05;
+    color:#00274C;
+}
+/* .resources>ul>li>figure>img {
+    width: 5%;
+    object-fit: cover;
+} */
+
+.resources>ul>li>figure>figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: #01162bc8;
+    width: 100%;
+}
+
+.resources>ul>li>figure>figcaption>h2 {
+    color: white;
+    padding: .75rem;
+    font-size: 1.25rem;
+}
+
+.resources>ul>li>a {
+    padding: .5rem 1rem;
+    margin: .5rem;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.resources>ul>li>p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: #00274C;
+    background-color: white;
+    border-radius: 0 0 25px 25px;
+    overflow: auto;
+    height: 3rem;
+}
+
+
+
+
+.crisis {
+    background-color: #9a3324;
+    color: white;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text inside the elements */
+    border-radius: 1rem;
+}
+
+.crisis>h2 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+/* CSS Collapsible content from https://www.digitalocean.com/community/tutorials/css-collapsible */
+.wrap-collabsible {
+    margin-bottom: 1.2rem 0;
+  }
+  
+  input[type='checkbox'] {
+    display: none;
+  }
+  
+  .lbl-toggle {
+    display: block;
+  
+    font-weight: bold;
+    font-family: 'Atkinson Hyperlegible', Montserrat, sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+  
+    padding: 1rem;
+  
+    color:white;
+    background: #01162b;
+  
+    cursor: pointer;
+  
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: all 0.25s ease-out;
+  }
+  
+  .lbl-toggle:hover {
+    color: #FFCB05;
+    /* color: #00274C; */
+  }
+  
+  .lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+  
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+  
+    transition: transform .2s ease-out;
+  }
+  
+  .toggle:checked + .lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+  }
+  
+  .collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+  }
+  
+  .toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: 100vh;
+  }
+  
+  .toggle:checked + .lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .collapsible-content .content-inner {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: .5rem 1rem;
+  }
+
+  .content-inner>p {
+    font-family: 'Atkinson Hyperlegible', 'Montserrat', sans-serif;
+    font-size: .95rem;
+    text-align:start;
+    line-height: 1.5;
+    padding: .25rem .5rem;
+    color: #00274C;
+  }
+
+  /* footer */
+footer {
+    background-color: #00274C;
+    color: white;
+    padding: .75rem;
+    color: white;
+    text-align: center;
+    font-size: .75rem;
+    border-top: #FFCB05 .1rem dotted;
+  }
+  footer a {
+    color:#FFCB05
+  }
+/* div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.welcome h2 {
+    grid-column: 1 / span 2;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.welcome h3 {
+    grid-column: 1 / span 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome p {
+    grid-column: 1 / span 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome ol {
+    grid-column: 1 / span 2;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.crisis h2 {
+    display: grid;
+    grid-column: 1 / span 2;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.crisis p {
+    grid-column: 1 / span 2;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.crisis article {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    overflow: visible;
+}
+
+.crisis img {
+    width: 100%;
+    height: auto;
+} */
