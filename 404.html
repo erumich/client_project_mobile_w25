@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8605de4a2b.js" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible|Montserrat|Playfair+Display">
+    <title>Student-Success-Portal-Home</title>
+</head>
+<body>
+
+    <header>
+        <a class = "skip" href="#main">Skip to Main content</a>
+  
+  <nav>
+    <!-- Always visible items in the nav bar -->
+    <a href="index.html" class="home"><img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo"></a>
+    <!-- The hamburger menu -->
+    <h1>Student Success Portal</h1>
+    <label for='menu' tabindex="0"  aria-label="navigation bar">
+    <i class="fa-solid fa-bars"></i>
+    </label>
+    </label>
+    <input id='menu' type='checkbox'/>
+    <!-- The collapsable menu -->
+    <ul>
+        <li><a href = "index.html"Home</a></li>
+        <li><a href = "academic_resources.html">Academic Resources</a></li>
+        <li><a href = "life_outside_the_classroom.html">Life Outside the Classroom</a></li>
+        <li><a href = "physical_and_mental_health.html">Physical and Mental Health</a></li>
+    </ul>
+</nav>
+ </header>
+   <main>
+     <section class="pages" id="pages">
+                <h1>404</h1>
+       <p>Sorry, we don't have that page yet! Try looking here instead:</p>
+       <ul>
+        <li><a href = "index.html"Home</a></li>
+        <li><a href = "academic_resources.html">Academic Resources</a></li>
+        <li><a href = "life_outside_the_classroom.html">Life Outside the Classroom</a></li>
+        <li><a href = "physical_and_mental_health.html">Physical and Mental Health</a></li>
+    </ul>
+     </section>
+    </main>
+    <footer>
+      <p>© Copyrights <span id="year"></span> Erin Ruark / UMSI.</p>
+
+        </footer>
+</body>
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+</html>
