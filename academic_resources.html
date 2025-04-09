@@ -26,7 +26,7 @@
                 <!-- The collapsable menu -->
                 <ul>
                     <li><a href = "index.html">Home</a></li>
-                    <li><a href = "academic_resources.html">Academic Resources</a></li>
+                    <li><a href = "academic_resources.html"  class = "active-page"> Academic Resources</a></li>
                     <li><a href = "life_outside_the_classroom.html">Life Outside the Classroom</a></li>
                     <li><a href = "physical_and_mental_health.html">Physical and Mental Health</a></li>
                 </ul>
@@ -145,8 +145,10 @@
 
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+      <p>© Copyrights <span id="year"></span> Erin Ruark / UMSI.</p>
         </footer>
 </body>
-
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 </html>
