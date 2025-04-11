@@ -50,7 +50,8 @@
                        </figure>
                        <div class="wrap-collabsible">
                            <input id="collapsible 13" class="toggle" type="checkbox">
-                           <label for="collapsible 13" class="lbl-toggle">More Info</label>
+                           <label for="collapsible 13" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                            More Info</label>
                            <div class="collapsible-content">
                              <div class="content-inner">
                                <p>
@@ -68,7 +69,8 @@
                                 </figure>
                                 <div class="wrap-collabsible">
                                     <input id="collapsible 14" class="toggle" type="checkbox">
-                                    <label for="collapsible 14" class="lbl-toggle">More Info</label>
+                                    <label for="collapsible 14" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                      More Info</label>
                                     <div class="collapsible-content">
                                       <div class="content-inner">
                                         <p>Join one of the many student organizations to connect with peers who share your interests and passions.</p>
@@ -83,7 +85,8 @@
                                 </figure>
                                 <div class="wrap-collabsible">
                                     <input id="collapsible 15" class="toggle" type="checkbox">
-                                    <label for="collapsible 15" class="lbl-toggle">More Info</label>
+                                    <label for="collapsible 15" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                      More Info</label>
                                     <div class="collapsible-content">
                                       <div class="content-inner">
                                         <p>Explore UM's vibrant arts scene with events, exhibitions, and performances happening year-round.</p>
@@ -98,7 +101,8 @@
                                 </figure>
                                 <div class="wrap-collabsible">
                                     <input id="collapsible 16" class="toggle" type="checkbox">
-                                    <label for="collapsible 16" class="lbl-toggle">More Info</label>
+                                    <label for="collapsible 16" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                      More Info</label>
                                     <div class="collapsible-content">
                                       <div class="content-inner">
                                         <p>Support the Wolverines by attending games and cheering on your favorite teams.</p>
@@ -112,5 +116,19 @@
 </body>
 <script>
   document.getElementById("year").innerHTML = new Date().getFullYear();
+  document.querySelectorAll('.lbl-toggle').forEach(label => {
+    label.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            label.click(); // Simulate a click on the label
+        }
+    });
+
+    label.addEventListener('click', () => {
+        const checkbox = document.getElementById(label.getAttribute('for'));
+        const expanded = checkbox.checked;
+        label.setAttribute('aria-expanded', expanded);
+    });
+});
   </script>
 </html>

@@ -17,6 +17,17 @@ input[type="checkbox"]:not(:checked)+ul {
     display: none;
 }
 
+.lbl-toggle:focus {
+    outline: 2px solid #FFCB05; /* Add a visible outline */
+    outline-offset: 2px;
+    color: #FFCB05;
+}
+
+figure>a:focus {
+    outline: 2px solid #FFCB05; 
+    outline-offset: 4px;
+}
+
 main {
     background-color: #00274C;
 }
@@ -490,6 +501,83 @@ footer {
   footer a {
     color:#FFCB05
   }
+
+  /* #four-oh-four {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 15% 15% 60% 10%;
+    grid-gap: .5rem;
+  }
+    #four-oh-four>h1 {
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 1;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    padding-top: .5rem;
+    color:#FFCB05;
+    }
+    #four-oh-four>h2 {
+        display: grid;
+        grid-column: 1 / span 4;
+        grid-row: 2 / span 1;
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        padding-top: .5rem;
+        color:#FFCB05;
+    }
+    #four-oh-four>img {
+        grid-column: 1 / span 3;
+        grid-row: 3 / span 4;
+       object-fit: cover;
+        }
+
+    #four-oh-four>p,a {
+        grid-column: 4 / span 1;
+        grid-row: 3 / span 4;
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        padding-top: .5rem;
+        color:#FFCB05;
+    } */
+    #four-oh-four {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+}
+        
+        #four-oh-four ul li a{
+        display: flex;
+        color:#FFCB05;
+        text-decoration: underline;
+        font-weight: bold;
+        margin: .5rem;
+        font-size: 1.2rem;;
+        justify-content: center;
+    }
+
+    #four-oh-four>h1 {
+       width:auto;
+       background-color:#00274C;
+       color:#FFCB05;
+       font-size: 3rem;
+    }
+
+    #four-oh-four>h2 {
+        width:auto;
+        background-color:#00274C;
+        color:#FFCB05;
+        text-align: center;;
+     }
+    #four-oh-four img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
 /* div {
     display: grid;
     grid-template-columns: 50% 50%;

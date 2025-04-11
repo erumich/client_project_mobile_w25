@@ -50,7 +50,8 @@
                         </figure>
                         <div class="wrap-collabsible">
                             <input id="collapsible4" class="toggle" type="checkbox">
-                            <label for="collapsible4" class="lbl-toggle">More Info</label>
+                            <label for="collapsible4" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                              More Info</label>
                             <div class="collapsible-content">
                               <div class="content-inner">
                                 <p>"The MSI Academic Advising Resource Site is a comprehensive resource for students to find information on academic policies, procedures, and resources. The site includes information on course registration, degree requirements, academic support, and more."</p>
@@ -66,7 +67,8 @@
                         </figure>
                         <div class="wrap-collabsible">
                             <input id="collapsible5" class="toggle" type="checkbox">
-                            <label for="collapsible5" class="lbl-toggle">More Info</label>
+                            <label for="collapsible5" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                              More Info</label>
                             <div class="collapsible-content">
                               <div class="content-inner">
                                 <p>Utilize career counseling, job search resources, and networking opportunities to prepare for your professional future.</p>
@@ -86,7 +88,8 @@
                         </figure>
                         <div class="wrap-collabsible">
                             <input id="collapsible6" class="toggle" type="checkbox">
-                            <label for="collapsible6" class="lbl-toggle">More Info</label>
+                            <label for="collapsible6" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                              More Info</label>
                             <div class="collapsible-content">
                               <div class="content-inner">
                                 <p>"The Academic Success Team at UMSI is dedicated to supporting students inside and outside of the classroom. This site is dedicated to connecting students to tutoring and academic support resources. Resources covered on this site include: UMSI Peer Tutoring, Programming Peer Tutoring, Math Peer Tutoring, Additional Academic Support Resources, Link to the Peer-to-Peer Tutor Directory"</p>
@@ -102,7 +105,8 @@
                         </figure>
                         <div class="wrap-collabsible">
                             <input id="collapsible 6" class="toggle" type="checkbox">
-                            <label for="collapsible 6" class="lbl-toggle">More Info</label>
+                            <label for="collapsible 6" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                              More Info</label>
                             <div class="collapsible-content">
                               <div class="content-inner">
                                 <p>"Study Spaces at U-M is a tool designed to help you find and reserve designated study spaces, computer stations, a space for you to take a remote class, or just a dedicated quiet touchdown spot between classes."</p>
@@ -120,7 +124,8 @@
                     <a href = "https://www.cew.umich.edu/"><h1>Center for the Education of Women+</h1></a>
                 <div class="wrap-collabsible">
                     <input id="collapsible7" class="toggle" type="checkbox">
-                    <label for="collapsible7" class="lbl-toggle">More Info</label>
+                    <label for="collapsible7" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                      More Info</label>
                     <div class="collapsible-content">
                       <div class="content-inner">
                         <p>At CEW+, we navigate circumstantial barriers by providing academic, financial, and professional support to help you reach your personal potential. Established to support women through higher education, we lift up women and all underserved communities at U-M and beyond. Through career and education counseling, funding, workshops, events, and a diverse, welcoming community, we exist to empower."</p>
@@ -133,7 +138,8 @@
                     <a href = "https://firstgen.umich.edu/"><h1>First Gen</h1></a>
                 <div class="wrap-collabsible">
                     <input id="collapsible8" class="toggle" type="checkbox">
-                    <label for="collapsible8" class="lbl-toggle">More Info</label>
+                    <label for="collapsible8" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                      More Info</label>
                     <div class="collapsible-content">
                       <div class="content-inner">
                         <p>"First-Generation College Students @UM, a student organization, was founded in 2007 with the mission to increase accessibility to resources for first-generation students and to build community among the population. The students advocated for greater campus support for themselves and other peer first-generation students."</p>
@@ -150,5 +156,19 @@
 </body>
 <script>
   document.getElementById("year").innerHTML = new Date().getFullYear();
+  document.querySelectorAll('.lbl-toggle').forEach(label => {
+    label.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            label.click(); // Simulate a click on the label
+        }
+    });
+
+    label.addEventListener('click', () => {
+        const checkbox = document.getElementById(label.getAttribute('for'));
+        const expanded = checkbox.checked;
+        label.setAttribute('aria-expanded', expanded);
+    });
+});
   </script>
 </html>

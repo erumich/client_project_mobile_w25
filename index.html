@@ -47,47 +47,32 @@
                 <article>
                     <p>We want you to be successful inside and outside of the classroom, so we've created this guide! Below you'll find a list of resources explored in this site.</p>
                   </article>
-                  <div class = "MainNav" id = "main-nav">
-                    <a href="academic_resources.html" aria-label = "Academic Resources page"><div class = "NavOne" id = "nav-one">
-                    <i class="fa-solid fa-book"></i>
-                    <h2>Academic Resources</h2></a></div>
-                   <div class = "NavTwo" id = "nav-two"><p>→Academic Advising, Career Resources, Tutoring, Study Spaces, and more!</p></div></div>
+                  <div class="MainNav" id="main-nav">
+                    <a href="academic_resources.html" aria-label="Academic Resources page">
+                        <div class="NavOne" id="nav-one" role = "button">
+                            <i class="fa-solid fa-book"></i>
+                            <h2>Academic Resources</h2>
+                        </div>
+                        <div class="NavTwo" id="nav-two">
+                            <p>→Academic Advising, Career Resources, Tutoring, Study Spaces, and more!</p>
+                        </div>
+                    </a>
+                </div>
 
                    <div class = "MainNav" id = "main-nav">
-                    <a href="life_outside_the_classroom.html" aria-label = "Life Outside the Classroom page"><div class = "NavOne" id = "nav-one">
+                    <a href="life_outside_the_classroom.html" aria-label = "Life Outside the Classroom page"><div class = "NavOne" id = "nav-one" role = "button">
                   <i class="fa-solid fa-bicycle"></i>
-                    <h2>Life Outside the Classroom</h2></div></a>
+                    <h2>Life Outside the Classroom</h2></div>
                     <div class = "NavTwo" id = "nav-two"><p>→Where to Stay & What to Do in Ann Arbor!</p>
-                    </div></div>
+                    </div></a></div>
 
-            <a href="physical_and_mental_health.html" aria-label = "Physical and Mental Health page"><div class = "MainNav" id = "main-nav"><div class = "NavOne" id = "nav-one">
+            <a href="physical_and_mental_health.html" aria-label = "Physical and Mental Health page"><div class = "MainNav" id = "main-nav"><div class = "NavOne" id = "nav-one" role = "button">
                 <i class="fa-solid fa-heart-pulse"></i>
-                <h2>Physical and Mental Health</h2></div></a>
-                <div class = "NavTwo" id = "nav-two"><p>→University Health Services, Rec Sports, Mental Health Services, and Crisis Resources.</p></div>
+                <h2>Physical and Mental Health</h2></div>
+                <div class = "NavTwo" id = "nav-two"><p>→University Health Services, Rec Sports, Mental Health Services, and Crisis Resources.</p></div></a>
             </div>
                     </section>
 
-                <!-- <section class="pages" id="pages">
-                    <h1>Types of Resources</h1>
-                    <article>
-                        <p>We want you to be successful inside and outside of the classroom, so we've created this guide! Below you'll find a list of resources explored in this site.</p>
-                      </article>
-                    <ul>
-                        <a href="academic_resources.html"><li>
-                            <i class="fa-solid fa-book"></i>
-                            <h2>Academic Resources</h2></li></a>
-                           <li><p>→Academic Advising, Career Resources, Tutoring, Study Spaces, and more!</p>
-                        </li>
-                        <a href="life_outside_the_classroom.html"><li>
-                          <i class="fa-solid fa-bicycle"></i>
-                            <h2>Life Outside the Classroom</h2></li></a>
-                        <li><p>→Where to Stay & What to Do in Ann Arbor!</p>
-                    </li>
-                    <a href="physical_and_mental_health.html"><li>
-                        <i class="fa-solid fa-heart-pulse"></i>
-                        <h2>Physical and Mental Health</h2></li></a>
-                        <li><p>→University Health Services, Rec Sports, Mental Health Services, and Crisis Resources.</p>
-                    </li></ul></section> -->
 
         <div class = "crisis_section">
         <section class ="crisis" id = "crisis">
@@ -100,29 +85,37 @@
                 <li>
                     <figure>
                         <a href = "https://mbc.studentlife.umich.edu"><img src="images/MCOMMONS-EarthFestClimateActionSummit2024-09.jpg.JPG" alt="Three students accept free apples from vendor on the Diag."></a>
-                        <figcaption><h3>Maize and Blue Cupboard (Food Pantry)</h3></figcaption>
+                        <figcaption tabindex="0"><h3>Maize and Blue Cupboard (Food Pantry)</h3></figcaption>
                     </figure>
                     <div class="wrap-collabsible">
-                        <input id="collapsible" class="toggle" type="checkbox">
-                        <label for="collapsible" class="lbl-toggle">More Info</label>
-                        <div class="collapsible-content">
+                      <input id="collapsible" class="toggle" type="checkbox">
+                      <label for="collapsible" class="lbl-toggle" tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                          More Info
+                      </label>
+                      <div class="collapsible-content" id="collapsible-content">
                           <div class="content-inner">
-                            <p>
-                                Provides food, kitchen and cookingware, personal and household goods, and support. </p><br><p>Mission: "To ensure members of the University of Michigan community—whether on a tight budget or physically restrained from getting to a grocery store—receive equitable access to healthy, nutritious, and nourishing food and the ability to prepare it for themselves or others".
-                            </p> <!-- text source: Maize and Blue Cupboard website -->
+                              <p>
+                                  Provides food, kitchen and cookingware, personal and household goods, and support.
+                              </p>
+                              <br>
+                              <p>
+                                  Mission: "To ensure members of the University of Michigan community—whether on a tight budget or physically restrained from getting to a grocery store—receive equitable access to healthy, nutritious, and nourishing food and the ability to prepare it for themselves or others".
+                              </p>
                           </div>
-                        </div>
                       </div>
+                  </div>
                     </li>
                     <li>
                         <figure>
                             <a href = "https://basicneeds.studentlife.umich.edu/"><img src="images/MCOMMONS-Move-In-29.jpg.JPG" alt="Student volunteers and parents load items from a packed van into a blue bin at Move-In"></a>
-                            <figcaption><h3>Basic Needs Website</h3></figcaption>
+                            <figcaption tabindex="0"><h3>Basic Needs Website</h3></figcaption>
                         </figure>
                         <div class="wrap-collabsible">
                             <input id="collapsible 2" class="toggle" type="checkbox">
-                            <label for="collapsible 2" class="lbl-toggle">More Info</label>
-                            <div class="collapsible-content">
+                            <label for="collapsible 2" class="lbl-toggle" tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                              More Info
+                          </label>
+                            <div class="collapsible-content" id="collapsible-content">
                               <div class="content-inner">
                                 <p>
                                     The Basic Needs website helps connect students with resources they need, like emergency funds.</p><br><p>This website has been created to share information about the resources available to students. It’s also a place to share data and research that will help the U-M community understand how important this work is for the entire campus. It provides resources for Critical Incident Support & Conflict Management, Finance, Food, Health care, Housing and Transportation.</p>
@@ -134,12 +127,14 @@
                     <li>
                      <figure>
                         <a href = "https://caps.umich.edu/article/urgent-support"><img src="images/MCOMMONS-AssortedCampusSelects-6.jpg.JPG" alt="A student sits with their back against a tree in the Diag and props their laptop open on their lap."></a>
-                             <figcaption><h3>CAPS Urgent Support</h3></figcaption>
+                             <figcaption tabindex="0"><h3>CAPS Urgent Support</h3></figcaption>
                             </figure>
                             <div class="wrap-collabsible">
                                 <input id="collapsible 3" class="toggle" type="checkbox">
-                                <label for="collapsible 3" class="lbl-toggle">More Info</label>
-                                <div class="collapsible-content">
+                                <label for="collapsible 3" class="lbl-toggle" tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                  More Info
+                              </label>
+                                <div class="collapsible-content" id="collapsible-content">
                                   <div class="content-inner">
                                     <p>
                                         CAPS is accessible from anywhere you have a phone or a laptop.</p><br><p>Counseling and Psychological Services (CAPS) provides free confidential psychological services for currently enrolled U of M undergraduate and graduate students.These services include support for students experiencing a crisis or urgent situation.</p>
@@ -158,5 +153,19 @@
 </body>
 <script>
   document.getElementById("year").innerHTML = new Date().getFullYear();
+  document.querySelectorAll('.lbl-toggle').forEach(label => {
+    label.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            label.click(); // Simulate a click on the label
+        }
+    });
+
+    label.addEventListener('click', () => {
+        const checkbox = document.getElementById(label.getAttribute('for'));
+        const expanded = checkbox.checked;
+        label.setAttribute('aria-expanded', expanded);
+    });
+});
   </script>
 </html>

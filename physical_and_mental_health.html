@@ -50,7 +50,8 @@
                            </figure>
                            <div class="wrap-collabsible">
                                <input id="collapsible 9" class="toggle" type="checkbox">
-                               <label for="collapsible 9" class="lbl-toggle">More Info</label>
+                               <label for="collapsible 9" class="lbl-toggle" tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                More Info</label>
                                <div class="collapsible-content">
                                  <div class="content-inner">
                                    <p>
@@ -66,7 +67,8 @@
                                </figure>
                                <div class="wrap-collabsible">
                                    <input id="collapsible 10" class="toggle" type="checkbox">
-                                   <label for="collapsible 10" class="lbl-toggle">More Info</label>
+                                   <label for="collapsible 10" class="lbl-toggle" tabindex="0" aria-expanded="false" aria-controls="collapsible-content">tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                    More Info</label>
                                    <div class="collapsible-content">
                                      <div class="content-inner">
                                        <p>
@@ -85,7 +87,8 @@
                                    </figure>
                                    <div class="wrap-collabsible">
                                        <input id="collapsible 11" class="toggle" type="checkbox">
-                                       <label for="collapsible 11" class="lbl-toggle">More Info</label>
+                                       <label for="collapsible 11" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                        More Info</label>
                                        <div class="collapsible-content">
                                          <div class="content-inner">
                                            <p>
@@ -101,7 +104,8 @@
                                        </figure>
                                        <div class="wrap-collabsible">
                                            <input id="collapsible 12" class="toggle" type="checkbox">
-                                           <label for="collapsible 12" class="lbl-toggle">More Info</label>
+                                           <label for="collapsible 12" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                            More Info</label>
                                            <div class="collapsible-content">
                                              <div class="content-inner">
                                                <p>Our vision is to have a campus community that centers health equity and elevates well-being." Their website includes:  </p>
@@ -130,7 +134,8 @@
                             </figure>
                             <div class="wrap-collabsible">
                                 <input id="collapsible" class="toggle" type="checkbox">
-                                <label for="collapsible" class="lbl-toggle">More Info</label>
+                                <label for="collapsible" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                  More Info</label>
                                 <div class="collapsible-content">
                                   <div class="content-inner">
                                     <p>
@@ -147,7 +152,8 @@
                                 </figure>
                                 <div class="wrap-collabsible">
                                     <input id="collapsible 2" class="toggle" type="checkbox">
-                                    <label for="collapsible 2" class="lbl-toggle">More Info</label>
+                                    <label for="collapsible 2" class="lbl-toggle" tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                      More Info</label>
                                     <div class="collapsible-content">
                                       <div class="content-inner">
                                         <p>
@@ -164,7 +170,8 @@
                                     </figure>
                                     <div class="wrap-collabsible">
                                         <input id="collapsible 3" class="toggle" type="checkbox">
-                                        <label for="collapsible 3" class="lbl-toggle">More Info</label>
+                                        <label for="collapsible 3" class="lbl-toggle"tabindex="0" aria-expanded="false" aria-controls="collapsible-content">
+                                          More Info</label>
                                         <div class="collapsible-content">
                                           <div class="content-inner">
                                             <p>
@@ -188,5 +195,19 @@
 </body>
 <script>
   document.getElementById("year").innerHTML = new Date().getFullYear();
+  document.querySelectorAll('.lbl-toggle').forEach(label => {
+    label.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            label.click(); // Simulate a click on the label
+        }
+    });
+
+    label.addEventListener('click', () => {
+        const checkbox = document.getElementById(label.getAttribute('for'));
+        const expanded = checkbox.checked;
+        label.setAttribute('aria-expanded', expanded);
+    });
+});
   </script>
 </html>
